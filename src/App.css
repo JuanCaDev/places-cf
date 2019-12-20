@@ -1,38 +1,77 @@
-.App {
+:root {
+  --indigo-400: #5c6bc0;
+  --red-400: #ef5350;
+  --light-blue-400: #29b6f6;
+  --amber-400: #ffca28;
+}
+
+Header-background {
+  padding: 50px 100px 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header-ilustration {
+  position: absolute;
+  z-index: 0;
+  top: -120px;
+  height: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header-main {
+  margin-bottom: 2em;
+  margin-left: -200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Header-benefit-image {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-basis: 30%;
+  max-width: 30%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.container-cards {
+  background-color: #5c6bc0;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  display: flex;
+}
+
+.card-media {
+  display: flex !important;
+  align-items: center;
+}
+
+.heart {
+  background-color: var(--red-400);
+}
+
+.wifi {
+  background-color: var(--light-blue-400);
+}
+
+.favorite {
+  background-color: var(--amber-400);
+}
+
+.card-media > .icon {
+  font-size: 3em;
+  padding: 0 1em;
+  color: white
 }
